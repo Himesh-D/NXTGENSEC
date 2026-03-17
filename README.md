@@ -26,12 +26,12 @@
 NXTGENSEC follows a modern, scalable, serverless architecture.
 
 ```mermaid
-graph TD;
-    Client[Client (Vite/React)] <--> |Real-time Sync| Firestore[Firestore Database];
-    Client ----> |Identity| Auth[Firebase Auth];
-    Client <----> |Project Media| Storage[Cloud Storage Bucket];
-    Firestore <--> Functions[Cloud Functions];
-    Functions <--> ExternalAPIs[AI/Certs/APIs];
+flowchart TD
+    Client["Client (Vite/React)"] <-->|"Real-time Sync"| Firestore["Firestore Database"]
+    Client -->|"Identity"| Auth["Firebase Auth"]
+    Client <-->|"Project Media"| Storage["Cloud Storage Bucket"]
+    Firestore <--> Functions["Cloud Functions"]
+    Functions <--> ExternalAPIs["AI/Certs/APIs"]
 ```
 
 ### 📂 Folder Structure
